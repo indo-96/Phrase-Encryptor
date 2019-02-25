@@ -70,6 +70,8 @@ while True:
             value = decrypt_dec[i] - offset
             if value < 36:
                 value = value + 95
+                    if value > 126:
+                    value = value - 95
             actual_ASCII = value
             actual_char = chr(actual_ASCII)
             decrypted_string.append(actual_char)
@@ -97,6 +99,8 @@ while True:
                 value = decrypt_dec[j] - offset
                 if value < 36:
                     value = value + 95
+                        if value > 126:
+                            value = value - 95
                 actual_ASCII = value
                 actual_char = chr(actual_ASCII)
                 decrypted_string.append(actual_char)
